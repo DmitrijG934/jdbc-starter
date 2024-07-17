@@ -29,6 +29,7 @@ public final class ConnectionManager {
         }
     }
 
+    // Applicable for older Java versions (lower than Java 8).
     private static void loadDriver() {
         try {
             Class.forName("org.postgresql.Driver");

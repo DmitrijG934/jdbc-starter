@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da5d4a41-f467-44ec-8c1e-779ef7ff4bd1" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/util/ConnectionManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/util/PropertiesUtil.java" afterDir="false" />
+    <list default="true" id="da5d4a41-f467-44ec-8c1e-779ef7ff4bd1" name="Changes" comment="Application skeleton ready">
+      <change afterPath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/TransactionRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdbc-starter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/jdbc-starter.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/JdbcRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/JdbcRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/util/ConnectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/util/ConnectionManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,9 +25,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2jCDV53g2I2qJXOy2gYW7TWqo0Z" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -38,7 +35,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.JavaGenerics.executor": "Run",
     "Application.JdbcRunner.executor": "Run",
+    "Application.TransactionRunner.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
@@ -47,10 +46,10 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "inlay.hints"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.TransactionRunner">
     <configuration name="JdbcRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="nn.dgordeev.jdbc.starter.JdbcRunner" />
       <module name="jdbc-starter" />
@@ -64,8 +63,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TransactionRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="nn.dgordeev.jdbc.starter.TransactionRunner" />
+      <module name="jdbc-starter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="nn.dgordeev.jdbc.starter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.TransactionRunner" />
+      <item itemvalue="Application.JdbcRunner" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TransactionRunner" />
         <item itemvalue="Application.JdbcRunner" />
       </list>
     </recent_temporary>
@@ -95,11 +112,61 @@
       <option name="project" value="LOCAL" />
       <updated>1720882462879</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Application skeleton ready">
+      <option name="closed" value="true" />
+      <created>1720890517526</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1720890517526</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Application skeleton ready" />
+    <option name="LAST_COMMIT_MESSAGE" value="Application skeleton ready" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../Programs/Java/jdk-17/lib/src.zip!/java.base/java/time/format/DateTimeFormatter.java</url>
+          <line>1953</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../Programs/Java/jdk-17/lib/src.zip!/java.base/java/time/format/DateTimeFormatter.java</url>
+          <line>1955</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../Programs/Java/jdk-17/lib/src.zip!/java.base/java/time/format/DateTimeFormatter.java</url>
+          <line>1957</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/domain/FlightDataResult.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/JdbcRunner.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/JdbcRunner.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/TransactionRunner.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
