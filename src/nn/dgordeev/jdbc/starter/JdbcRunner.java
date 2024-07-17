@@ -8,12 +8,17 @@ import java.util.HashSet;
 
 public class JdbcRunner {
 
-    public static void main(String[] args) throws SQLException {
-        checkMetaData();
+    public static void main(String[] args) {
+        try {
+            checkMetaData();
+            ConnectionManager.closeConnectionPool();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     private static void checkMetaData() throws SQLException {
-        try (var connection = ConnectionManager.open()) {
+        try (var connection = ConnectionManager.get()) {
             var metaData = connection.getMetaData();
             var catalogs = metaData.getCatalogs();
             while (catalogs.next()) {
@@ -39,7 +44,7 @@ public class JdbcRunner {
                 WHERE range BETWEEN ? AND ?
                 """;
         try (
-                var connection = ConnectionManager.open();
+                var connection = ConnectionManager.get();
                 var preparedStatement = connection.prepareStatement(sql)
         ) {
             preparedStatement.setFetchSize(50);

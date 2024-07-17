@@ -1,23 +1,66 @@
 package nn.dgordeev.jdbc.starter.util;
 
+import java.lang.reflect.Proxy;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingQueue;
 
+import static java.util.Optional.ofNullable;
 import static nn.dgordeev.jdbc.starter.util.ConnectionManager.PropertyKey.DB_URL;
 import static nn.dgordeev.jdbc.starter.util.ConnectionManager.PropertyKey.PASSWORD;
+import static nn.dgordeev.jdbc.starter.util.ConnectionManager.PropertyKey.POOL_SIZE;
 import static nn.dgordeev.jdbc.starter.util.ConnectionManager.PropertyKey.USERNAME;
 
 public final class ConnectionManager {
 
+    private static final Integer DEFAULT_POOL_SIZE = 10;
+    private static BlockingQueue<ConnectionPoolObject> pool;
+
     static {
         loadDriver();
+        initializeConnectionPool();
     }
 
     private ConnectionManager() {
     }
 
-    public static Connection open() {
+    private static void initializeConnectionPool() {
+
+        int poolSize = ofNullable(PropertiesUtil.get(POOL_SIZE))
+                .map(Integer::parseInt)
+                .orElse(DEFAULT_POOL_SIZE);
+
+        pool = new ArrayBlockingQueue<>(poolSize);
+        for (int i = 0; i < poolSize; i++) {
+            var connection = open();
+            var proxyConnection = (Connection) Proxy.newProxyInstance(
+                    ConnectionManager.class.getClassLoader(),
+                    new Class[]{Connection.class},
+                    (proxy, method, args) -> "close".equals(method.getName()) ?
+                            pool.add(new ConnectionPoolObject(connection, (Connection) proxy)) :
+                            method.invoke(connection, args));
+            pool.add(new ConnectionPoolObject(connection, proxyConnection));
+        }
+    }
+
+    public static void closeConnectionPool() throws SQLException {
+        for (ConnectionPoolObject connectionPoolObject : pool) {
+            var sourceConnection = connectionPoolObject.sourceConnection();
+            sourceConnection.close();
+        }
+    }
+
+    public static Connection get() {
+        try {
+            return pool.take().proxyConnection();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private static Connection open() {
         try {
             return DriverManager.getConnection(
                     PropertiesUtil.get(DB_URL),
@@ -42,7 +85,9 @@ public final class ConnectionManager {
 
         DB_URL("db.url"),
         USERNAME("db.username"),
-        PASSWORD("db.password");
+        PASSWORD("db.password"),
+        FETCH_SIZE("db.fetch.size"),
+        POOL_SIZE("db.pool.size");
 
         private final String value;
 
@@ -53,5 +98,9 @@ public final class ConnectionManager {
         public String getValue() {
             return value;
         }
+    }
+
+    private record ConnectionPoolObject(Connection sourceConnection, Connection proxyConnection) {
+
     }
 }

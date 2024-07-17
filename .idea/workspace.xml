@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da5d4a41-f467-44ec-8c1e-779ef7ff4bd1" name="Changes" comment="Transactions &amp; PrepareStatement queries">
+    <list default="true" id="da5d4a41-f467-44ec-8c1e-779ef7ff4bd1" name="Changes" comment="Batch query">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/JdbcRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/JdbcRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/TransactionRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/TransactionRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/util/ConnectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/util/ConnectionManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +50,7 @@
     "settings.editor.selected.configurable": "inlay.hints"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.TransactionRunner">
+  <component name="RunManager" selected="Application.JdbcRunner">
     <configuration name="JdbcRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="nn.dgordeev.jdbc.starter.JdbcRunner" />
       <module name="jdbc-starter" />
@@ -80,8 +83,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TransactionRunner" />
         <item itemvalue="Application.JdbcRunner" />
+        <item itemvalue="Application.TransactionRunner" />
       </list>
     </recent_temporary>
   </component>
@@ -126,7 +129,23 @@
       <option name="project" value="LOCAL" />
       <updated>1721215795594</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Batch query">
+      <option name="closed" value="true" />
+      <created>1721226076418</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1721226076418</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Batch query">
+      <option name="closed" value="true" />
+      <created>1721226096109</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1721226096109</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -144,6 +163,26 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Application skeleton ready" />
     <MESSAGE value="Transactions &amp; PrepareStatement queries" />
-    <option name="LAST_COMMIT_MESSAGE" value="Transactions &amp; PrepareStatement queries" />
+    <MESSAGE value="Batch query" />
+    <option name="LAST_COMMIT_MESSAGE" value="Batch query" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/util/ConnectionManager.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/util/ConnectionManager.java</url>
+          <line>40</line>
+          <properties>
+            <option name="lambda-ordinal" value="0" />
+          </properties>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

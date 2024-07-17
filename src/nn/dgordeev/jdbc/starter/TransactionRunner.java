@@ -20,7 +20,7 @@ public class TransactionRunner {
 
         try {
 
-            connection = ConnectionManager.open();
+            connection = ConnectionManager.get();
             statement = connection.createStatement();
 
             connection.setAutoCommit(false);
