@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da5d4a41-f467-44ec-8c1e-779ef7ff4bd1" name="Changes" comment="Application skeleton ready">
-      <change afterPath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/TransactionRunner.java" afterDir="false" />
+    <list default="true" id="da5d4a41-f467-44ec-8c1e-779ef7ff4bd1" name="Changes" comment="Transactions &amp; PrepareStatement queries">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/JdbcRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/JdbcRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/util/ConnectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/util/ConnectionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/TransactionRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/TransactionRunner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,53 +118,32 @@
       <option name="project" value="LOCAL" />
       <updated>1720890517526</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Transactions &amp; PrepareStatement queries">
+      <option name="closed" value="true" />
+      <created>1721215795594</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1721215795594</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Application skeleton ready" />
-    <option name="LAST_COMMIT_MESSAGE" value="Application skeleton ready" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$PROJECT_DIR$/../../Programs/Java/jdk-17/lib/src.zip!/java.base/java/time/format/DateTimeFormatter.java</url>
-          <line>1953</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$PROJECT_DIR$/../../Programs/Java/jdk-17/lib/src.zip!/java.base/java/time/format/DateTimeFormatter.java</url>
-          <line>1955</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$PROJECT_DIR$/../../Programs/Java/jdk-17/lib/src.zip!/java.base/java/time/format/DateTimeFormatter.java</url>
-          <line>1957</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/domain/FlightDataResult.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/JdbcRunner.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/JdbcRunner.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/TransactionRunner.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Transactions &amp; PrepareStatement queries" />
+    <option name="LAST_COMMIT_MESSAGE" value="Transactions &amp; PrepareStatement queries" />
   </component>
 </project>

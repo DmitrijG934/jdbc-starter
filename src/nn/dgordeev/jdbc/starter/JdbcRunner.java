@@ -2,7 +2,6 @@ package nn.dgordeev.jdbc.starter;
 
 import nn.dgordeev.jdbc.starter.util.ConnectionManager;
 
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Collection;
 import java.util.HashSet;
@@ -10,8 +9,6 @@ import java.util.HashSet;
 public class JdbcRunner {
 
     public static void main(String[] args) throws SQLException {
-        /*var aircraftCodes = getAircraftCodesByRange(0, 300000000);
-        System.out.println(aircraftCodes);*/
         checkMetaData();
     }
 
