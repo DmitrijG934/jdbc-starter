@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da5d4a41-f467-44ec-8c1e-779ef7ff4bd1" name="Changes" comment="Fetch size property added">
+    <list default="true" id="da5d4a41-f467-44ec-8c1e-779ef7ff4bd1" name="Changes" comment="Working with &quot;flight_repository&quot; database (changed configuration)">
+      <change afterPath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/dao/TicketDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/entity/Ticket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/JdbcRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/JdbcRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/TransactionRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/TransactionRunner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +17,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -49,7 +49,7 @@
     "settings.editor.selected.configurable": "inlay.hints"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.TransactionRunner">
+  <component name="RunManager" selected="Application.JdbcRunner">
     <configuration name="JdbcRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="nn.dgordeev.jdbc.starter.JdbcRunner" />
       <module name="jdbc-starter" />
@@ -82,8 +82,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TransactionRunner" />
         <item itemvalue="Application.JdbcRunner" />
+        <item itemvalue="Application.TransactionRunner" />
       </list>
     </recent_temporary>
   </component>
@@ -160,7 +160,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721229788140</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Working with &quot;flight_repository&quot; database (changed configuration)">
+      <option name="closed" value="true" />
+      <created>1721298302114</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1721298302114</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -181,6 +189,7 @@
     <MESSAGE value="Batch query" />
     <MESSAGE value="Connection pool implemented." />
     <MESSAGE value="Fetch size property added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fetch size property added" />
+    <MESSAGE value="Working with &quot;flight_repository&quot; database (changed configuration)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working with &quot;flight_repository&quot; database (changed configuration)" />
   </component>
 </project>
