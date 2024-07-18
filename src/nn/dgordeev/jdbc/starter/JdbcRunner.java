@@ -13,11 +13,15 @@ import static nn.dgordeev.jdbc.starter.util.ConnectionManager.PropertyKey.FETCH_
 public class JdbcRunner {
 
     public static void main(String[] args) {
-        try {
-            checkMetaData();
-            ConnectionManager.closeConnectionPool();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
+        // Won't work with current "postgres" database, only with "demo" database
+        var jdbcUrl = PropertiesUtil.get(ConnectionManager.PropertyKey.DB_URL);
+        if (jdbcUrl.contains("demo")) {
+            try {
+                checkMetaData();
+                ConnectionManager.closeConnectionPool();
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 

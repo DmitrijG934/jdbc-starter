@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da5d4a41-f467-44ec-8c1e-779ef7ff4bd1" name="Changes" comment="Connection pool implemented.">
+    <list default="true" id="da5d4a41-f467-44ec-8c1e-779ef7ff4bd1" name="Changes" comment="Fetch size property added">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/JdbcRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/JdbcRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/TransactionRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/TransactionRunner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +49,7 @@
     "settings.editor.selected.configurable": "inlay.hints"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.JdbcRunner">
+  <component name="RunManager" selected="Application.TransactionRunner">
     <configuration name="JdbcRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="nn.dgordeev.jdbc.starter.JdbcRunner" />
       <module name="jdbc-starter" />
@@ -79,8 +82,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.JdbcRunner" />
         <item itemvalue="Application.TransactionRunner" />
+        <item itemvalue="Application.JdbcRunner" />
       </list>
     </recent_temporary>
   </component>
@@ -149,7 +152,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721229536938</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fetch size property added">
+      <option name="closed" value="true" />
+      <created>1721229788140</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1721229788140</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -169,6 +180,7 @@
     <MESSAGE value="Transactions &amp; PrepareStatement queries" />
     <MESSAGE value="Batch query" />
     <MESSAGE value="Connection pool implemented." />
-    <option name="LAST_COMMIT_MESSAGE" value="Connection pool implemented." />
+    <MESSAGE value="Fetch size property added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fetch size property added" />
   </component>
 </project>
