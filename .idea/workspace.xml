@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da5d4a41-f467-44ec-8c1e-779ef7ff4bd1" name="Changes" comment="Created basic entity DAO">
-      <change afterPath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/DaoRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/exception/DaoException.java" afterDir="false" />
+    <list default="true" id="da5d4a41-f467-44ec-8c1e-779ef7ff4bd1" name="Changes" comment="INSERT, DELETE DAO methods implemented">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/DaoRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/DaoRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/dao/TicketDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/dao/TicketDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/exception/DaoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/exception/DaoException.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +198,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721299981613</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="INSERT, DELETE DAO methods implemented">
+      <option name="closed" value="true" />
+      <created>1721301778064</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1721301778064</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -221,22 +229,7 @@
     <MESSAGE value="Fetch size property added" />
     <MESSAGE value="Working with &quot;flight_repository&quot; database (changed configuration)" />
     <MESSAGE value="Created basic entity DAO" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created basic entity DAO" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/DaoRunner.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/DaoRunner.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="INSERT, DELETE DAO methods implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="INSERT, DELETE DAO methods implemented" />
   </component>
 </project>
