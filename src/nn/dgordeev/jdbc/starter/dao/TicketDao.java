@@ -16,9 +16,9 @@ import java.util.Optional;
 
 import static java.util.Optional.ofNullable;
 
-public class TicketDao {
+public class TicketDao implements Dao<Long, Ticket> {
 
-    private volatile static TicketDao INSTANCE;
+    private static volatile TicketDao INSTANCE;
 
     private static final String DELETE_BY_ID_SQL = """
             DELETE FROM ticket WHERE id = ?
@@ -40,13 +40,20 @@ public class TicketDao {
             """;
     private static final String FIND_ALL_SQL = """
             SELECT
+                id, passenger_no, passenger_name, flight_id, seat_no, cost
+            FROM ticket
+            """;
+    private static final String FIND_ALL_SQL_WITH_JOIN = """
+            SELECT
                 t.id, t.passenger_no, t.passenger_name, t.flight_id, t.seat_no, t.cost,
                 f.id as fid, f.flight_no, f.departure_date, f.departure_airport_code, f.arrival_date,
                 f.arrival_airport_code, f.aircraft_id, f.status
             FROM ticket t
             LEFT JOIN flight f ON t.flight_id = f.id
             """;
-    private static final String FIND_BY_ID_SQL = FIND_ALL_SQL + " WHERE ticket.id = ?";
+    private static final String FIND_BY_ID_SQL = FIND_ALL_SQL_WITH_JOIN + " WHERE ticket.id = ?";
+
+    private final FlightDao flightDao = FlightDao.getInstance();
 
     private TicketDao() {
     }
@@ -103,7 +110,7 @@ public class TicketDao {
 
     public Collection<Ticket> findAll(TicketFilter filter) {
         var queryParams = filter.getQueryParameters();
-        var sql = FIND_ALL_SQL + queryParams.sql();
+        var sql = FIND_ALL_SQL_WITH_JOIN + queryParams.sql();
         if (filter.distinctFilter()) {
             sql = sql.replace("SELECT", "SELECT DISTINCT");
         }
@@ -128,14 +135,27 @@ public class TicketDao {
     }
 
     private Ticket buildTicket(ResultSet result) throws SQLException {
-        return Ticket.builder()
+        var builder = Ticket.builder()
                 .id(result.getLong("id"))
                 .passengerName(result.getString("passenger_name"))
                 .passengerNo(result.getString("passenger_no"))
                 .seatNo(result.getString("seat_no"))
-                .flight(buildFlight(result))
-                .cost(result.getBigDecimal("cost"))
-                .build();
+                .cost(result.getBigDecimal("cost"));
+        try {
+            builder.flight(buildFlight(result));
+        } catch (SQLException e) {
+            if (e.getMessage().contains("Колонки fid не найдено в этом ResultSet’’е.")) {
+                builder.flight(
+                        flightDao.findById(
+                                result.getLong("flight_id"),
+                                result.getStatement().getConnection()
+                        ).orElse(null)
+                );
+            } else {
+                throw new DaoException(e);
+            }
+        }
+        return builder.build();
     }
 
     private Flight buildFlight(ResultSet result) throws SQLException {
@@ -163,6 +183,24 @@ public class TicketDao {
             } else {
                 throw new DaoException("Unable to find ticket with id " + id);
             }
+        } catch (Exception e) {
+            throw new DaoException(e);
+        }
+    }
+
+    @Override
+    public Collection<Ticket> findAll() {
+        try (
+                var connection = ConnectionManager.get();
+                var findStatement = connection.prepareStatement(FIND_ALL_SQL)
+        ) {
+            System.out.println(findStatement);
+            var result = findStatement.executeQuery();
+            List<Ticket> tickets = new ArrayList<>();
+            while (result.next()) {
+                tickets.add(buildTicket(result));
+            }
+            return tickets;
         } catch (Exception e) {
             throw new DaoException(e);
         }

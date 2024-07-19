@@ -13,7 +13,16 @@ public class DaoRunner {
 //        testSelect();
 //        testSelectUpdate();
 //        testTicketNotFoundCase();
-        testSelectWithOffsetAndLimit();
+//        testSelectWithOffsetAndLimit();
+        var ticketDao = TicketDao.getInstance();
+        var ticketsCount = ticketDao.findAll()
+                .stream()
+                .filter(ticket -> {
+                    var flight = ticket.getFlight();
+                    return flight != null && "NOT_ARRIVED".equals(flight.status());
+                })
+                .count();
+        System.out.println(ticketsCount);
     }
 
     private static void testSelectWithOffsetAndLimit() {

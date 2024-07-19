@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da5d4a41-f467-44ec-8c1e-779ef7ff4bd1" name="Changes" comment="Batch select with query filter">
-      <change afterPath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/entity/Flight.java" afterDir="false" />
+    <list default="true" id="da5d4a41-f467-44ec-8c1e-779ef7ff4bd1" name="Changes" comment="one-to-one approach with join's">
+      <change afterPath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/dao/Dao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/dao/FlightDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/DaoRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/DaoRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/dao/TicketDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/dao/TicketDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/entity/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/entity/Ticket.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,9 +19,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Record" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="Record" />
       </list>
     </option>
   </component>
@@ -48,7 +48,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.DaoRunner.executor": "Debug",
+    "Application.DaoRunner.executor": "Run",
     "Application.JavaGenerics.executor": "Run",
     "Application.JdbcRunner.executor": "Run",
     "Application.TransactionRunner.executor": "Run",
@@ -250,7 +250,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721384956106</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="one-to-one approach with join's">
+      <option name="closed" value="true" />
+      <created>1721386774154</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1721386774154</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -276,15 +284,21 @@
     <MESSAGE value="INSERT, DELETE DAO methods implemented" />
     <MESSAGE value="added dao implementations" />
     <MESSAGE value="Batch select with query filter" />
-    <option name="LAST_COMMIT_MESSAGE" value="Batch select with query filter" />
+    <MESSAGE value="one-to-one approach with join's" />
+    <option name="LAST_COMMIT_MESSAGE" value="one-to-one approach with join's" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/DaoRunner.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="54" />
+          <line>20</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/DaoRunner.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="61" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
