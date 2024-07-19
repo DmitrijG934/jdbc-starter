@@ -1,6 +1,7 @@
 package nn.dgordeev.jdbc.starter;
 
 import nn.dgordeev.jdbc.starter.dao.TicketDao;
+import nn.dgordeev.jdbc.starter.dto.TicketFilter;
 import nn.dgordeev.jdbc.starter.entity.Ticket;
 
 import java.math.BigDecimal;
@@ -17,7 +18,10 @@ public class DaoRunner {
 
     private static void testSelectWithOffsetAndLimit() {
         var ticketDao = TicketDao.getInstance();
-        var tickets = ticketDao.findAll(100, 0);
+        var filter = new TicketFilter(0, 0, 0, null,
+                "Иван Иванов", 1, null, null, false);
+        var tickets = ticketDao.findAll(filter);
+        System.out.println();
         tickets.forEach(System.out::println);
     }
 

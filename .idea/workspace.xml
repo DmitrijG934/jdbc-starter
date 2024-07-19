@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da5d4a41-f467-44ec-8c1e-779ef7ff4bd1" name="Changes" comment="INSERT, DELETE DAO methods implemented">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/DaoRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/DaoRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/dao/TicketDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/dao/TicketDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/exception/DaoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/exception/DaoException.java" afterDir="false" />
+    <list default="true" id="da5d4a41-f467-44ec-8c1e-779ef7ff4bd1" name="Changes" comment="Batch select with query filter">
+      <change beforePath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/dto/TicketFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/dto/TicketFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/entity/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/entity/Ticket.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +34,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.DaoRunner.executor": "Debug",
+    "Application.DaoRunner.executor": "Run",
     "Application.JavaGenerics.executor": "Run",
     "Application.JdbcRunner.executor": "Run",
     "Application.TransactionRunner.executor": "Run",
@@ -206,7 +204,23 @@
       <option name="project" value="LOCAL" />
       <updated>1721301778064</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="added dao implementations">
+      <option name="closed" value="true" />
+      <created>1721318103058</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1721318103058</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Batch select with query filter">
+      <option name="closed" value="true" />
+      <created>1721384886323</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1721384886323</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -230,6 +244,24 @@
     <MESSAGE value="Working with &quot;flight_repository&quot; database (changed configuration)" />
     <MESSAGE value="Created basic entity DAO" />
     <MESSAGE value="INSERT, DELETE DAO methods implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="INSERT, DELETE DAO methods implemented" />
+    <MESSAGE value="added dao implementations" />
+    <MESSAGE value="Batch select with query filter" />
+    <option name="LAST_COMMIT_MESSAGE" value="Batch select with query filter" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/dao/TicketDao.java</url>
+          <line>100</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/dao/TicketDao.java</url>
+          <line>109</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,5 +1,6 @@
 package nn.dgordeev.jdbc.starter.dao;
 
+import nn.dgordeev.jdbc.starter.dto.TicketFilter;
 import nn.dgordeev.jdbc.starter.entity.Ticket;
 import nn.dgordeev.jdbc.starter.exception.DaoException;
 import nn.dgordeev.jdbc.starter.util.ConnectionManager;
@@ -9,6 +10,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 import java.util.Optional;
 
 import static java.util.Optional.ofNullable;
@@ -35,18 +37,11 @@ public class TicketDao {
                 cost = ?
             WHERE id = ?
             """;
-    private static final String FIND_BY_ID_SQL = """
-            SELECT
-                id, passenger_no, passenger_name, flight_id, seat_no, cost
-            FROM ticket
-            WHERE id = ?
-            """;
     private static final String FIND_ALL_SQL = """
             SELECT
                 id, passenger_no, passenger_name, flight_id, seat_no, cost
-            FROM ticket
-            LIMIT ? OFFSET ?
-            """;
+            FROM ticket""";
+    private static final String FIND_BY_ID_SQL = FIND_ALL_SQL + " WHERE id = ?";
 
     private TicketDao() {
     }
@@ -101,19 +96,23 @@ public class TicketDao {
         return ofNullable(findByIdRequired(id));
     }
 
-    public Collection<Ticket> findAll() {
-        return findAll(10, 0);
-    }
-
-    public Collection<Ticket> findAll(long limit, long offset) {
+    public Collection<Ticket> findAll(TicketFilter filter) {
+        var queryParams = filter.getQueryParameters();
+        var sql = FIND_ALL_SQL + queryParams.sql();
+        if (filter.distinctFilter()) {
+            sql = sql.replace("SELECT", "SELECT DISTINCT");
+        }
         try (
                 var connection = ConnectionManager.get();
-                var findStatement = connection.prepareStatement(FIND_ALL_SQL)
+                var findStatement = connection.prepareStatement(sql)
         ) {
-            findStatement.setLong(1, limit);
-            findStatement.setLong(2, offset);
+            var prepareParams = queryParams.prepareParams();
+            for (int i = 0; i < prepareParams.size(); i++) {
+                findStatement.setObject(i + 1, prepareParams.get(i));
+            }
+            System.out.println(findStatement);
             var result = findStatement.executeQuery();
-            var tickets = new ArrayList<Ticket>();
+            List<Ticket> tickets = new ArrayList<>();
             while (result.next()) {
                 tickets.add(buildTicket(result));
             }

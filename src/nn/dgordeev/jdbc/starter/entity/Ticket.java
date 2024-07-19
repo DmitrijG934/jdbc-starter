@@ -58,16 +58,6 @@ public class Ticket {
             return this.ticket;
         }
     }
-
-    public Ticket(Long id, String passengerNo, String passengerName, Long flightId, String seatNo, BigDecimal cost) {
-        this.id = id;
-        this.passengerNo = passengerNo;
-        this.passengerName = passengerName;
-        this.flightId = flightId;
-        this.seatNo = seatNo;
-        this.cost = cost;
-    }
-
     public Ticket() {
     }
 
