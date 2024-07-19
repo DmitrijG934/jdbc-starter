@@ -13,13 +13,13 @@ public class DaoRunner {
 //        testSelect();
 //        testSelectUpdate();
 //        testTicketNotFoundCase();
-//        testSelectWithOffsetAndLimit();
+        testSelectWithOffsetAndLimit();
     }
 
     private static void testSelectWithOffsetAndLimit() {
         var ticketDao = TicketDao.getInstance();
-        var filter = new TicketFilter(0, 0, 0, null,
-                "Иван Иванов", 1, null, null, false);
+        var filter = new TicketFilter(100, 0, 0, null,
+                null, 0, null, null, false);
         var tickets = ticketDao.findAll(filter);
         System.out.println();
         tickets.forEach(System.out::println);
@@ -54,7 +54,7 @@ public class DaoRunner {
     private static void testInsertDelete() {
         var ticketDao = TicketDao.getInstance();
         var ticket = Ticket.builder()
-                .flightId(9L)
+//                .flight(9L)
                 .cost(BigDecimal.TEN)
                 .seatNo("C1")
                 .passengerName("Alex Wilson")

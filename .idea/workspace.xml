@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da5d4a41-f467-44ec-8c1e-779ef7ff4bd1" name="Changes" comment="Batch select with query filter">
-      <change beforePath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/dto/TicketFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/dto/TicketFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/entity/Flight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/DaoRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/DaoRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/dao/TicketDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/dao/TicketDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/entity/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/entity/Ticket.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,11 +21,22 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="Record" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitRewordedCommitMessages">
+    <option name="commitMessagesMapping">
+      <RewordedCommitMessageMapping>
+        <option name="originalMessage" value="Batch select with query filter" />
+        <option name="rewordedMessage" value="Batch select with query filter" />
+      </RewordedCommitMessageMapping>
+    </option>
+    <option name="currentCommit" value="1" />
+    <option name="onto" value="1d40fc6caa8649a6640108efadbcc42b2f3333e3" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -34,7 +48,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.DaoRunner.executor": "Run",
+    "Application.DaoRunner.executor": "Debug",
     "Application.JavaGenerics.executor": "Run",
     "Application.JdbcRunner.executor": "Run",
     "Application.TransactionRunner.executor": "Run",
@@ -220,7 +234,23 @@
       <option name="project" value="LOCAL" />
       <updated>1721384886323</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Batch select with query filter">
+      <option name="closed" value="true" />
+      <created>1721384953011</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1721384953011</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Batch select with query filter">
+      <option name="closed" value="true" />
+      <created>1721384956106</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1721384956106</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -252,14 +282,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/dao/TicketDao.java</url>
-          <line>100</line>
-          <option name="timeStamp" value="51" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/dao/TicketDao.java</url>
-          <line>109</line>
-          <option name="timeStamp" value="52" />
+          <url>file://$PROJECT_DIR$/src/nn/dgordeev/jdbc/starter/DaoRunner.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="54" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
